@@ -10,6 +10,7 @@ const out = process.argv[3] || 'D:/AMH/DKAINSWORLD-PhotoUpdate/private/qa';
 fs.mkdirSync(out, { recursive: true });
 const MAPS = 'https://maps.app.goo.gl/Nu84KZXRDFjCbwpp7?g_st=ac';
 const STORE = 'https://www.facebook.com/marketplace/profile/100005788064086/?ref=permalink&mibextid=dXMIcH';
+const INV = JSON.parse(fs.readFileSync('D:/AMH/DKAINSWORLD-PhotoUpdate/inventory.json','utf8'));const N = INV.length;
 const report = { base, widths: {}, failures: [] };
 const fail = (w, msg) => report.failures.push(`${w}: ${msg}`);
 
@@ -22,7 +23,7 @@ for (const [w, h] of [[320, 700], [390, 844], [1366, 900]]) {
   page.on('console', m => m.type() === 'error' && consoleErrors.push(m.text()));
   page.on('response', r => r.status() >= 400 && bad.push(`${r.status()} ${r.url()}`));
   await page.goto(base, { waitUntil: 'networkidle' });
-  await page.mouse.wheel(0, 1); await page.waitForTimeout(150); await page.evaluate(() => scrollTo(0, 0));
+  await page.mouse.click(2, 300); await page.waitForTimeout(150); await page.evaluate(() => scrollTo(0, 0));
   await page.waitForTimeout(9500);
   await page.screenshot({ path: `${out}/hero-${w}.png` });
   const r = {};
@@ -89,7 +90,7 @@ for (const [w, h] of [[320, 700], [390, 844], [1366, 900]]) {
   await page.fill('#search', '');
   await page.waitForTimeout(200);
   r.all = await page.locator('.item-card:not([hidden])').count();
-  if (r.backpacks !== 2 || r.searchPipe < 1 || r.all !== 20) fail(w, `filters ${r.backpacks}/${r.searchPipe}/${r.all}`);
+  if (r.backpacks !== INV.filter(i => i.category === 'backpacks').length || r.searchPipe < 1 || r.all !== N) fail(w, `filters ${r.backpacks}/${r.searchPipe}/${r.all}`);
   // every card has a photo; 3 Facebook listings link out; price list covers every item
   r.cards = await page.evaluate(() => ({
     total: document.querySelectorAll('.item-card').length,
@@ -99,9 +100,9 @@ for (const [w, h] of [[320, 700], [390, 844], [1366, 900]]) {
     priceRows: document.querySelectorAll('#price-list .pl-panel > ul > li').length,
     priceTargets: [...document.querySelectorAll('#price-list .pl-panel > ul > li > a')].every(a => document.querySelector(a.getAttribute('href')))
   }));
-  const FB = ['1103700079241670', '2106563970226121', '28444710648484140'];
-  if (r.cards.total !== 20 || r.cards.withPhoto !== 20 || r.cards.examples !== 0 || r.cards.priceRows !== 20 || !r.cards.priceTargets
-    || r.cards.fb.length !== 3 || !FB.every(id => r.cards.fb.includes(`https://www.facebook.com/marketplace/item/${id}/`))) fail(w, 'cards ' + JSON.stringify(r.cards));
+  const FB = INV.filter(i => i.platform === 'facebook-marketplace').map(i => i.sourceUrl.match(/item\/(\d+)/)[1]);
+  if (r.cards.total !== N || r.cards.withPhoto !== N || r.cards.examples !== 0 || r.cards.priceRows !== N || !r.cards.priceTargets
+    || r.cards.fb.length !== FB.length || !FB.every(id => r.cards.fb.includes(`https://www.facebook.com/marketplace/item/${id}/`))) fail(w, 'cards ' + JSON.stringify(r.cards));
   // galleries for the four new-photo listings
   r.galleries = {};
   for (const [id, n] of [['pipe-wrenches', 3], ['pick-your-tools', 3], ['dbz-orange-yellow', 3], ['kid-goku', 2]]) {

@@ -23,11 +23,12 @@ def crop_box(im,name):
  sub=a[y0:y1];colit=(sub>28).mean(0)>0.25;xs=np.where(colit)[0]
  return (int(xs[0]),y0+3,int(xs[-1])+1,y1-3)
 rows=[]
-for f in sorted((P/'assets/items').glob('*.jpg')):
+SRC=R/'handoff/Images - 19 original item photos and 8 brand assets'
+for f in sorted(f for f in SRC.glob('*.jpg') if f.stem.rsplit('-',1)[-1].isdigit() and not f.name.startswith(('empty','warehouse','platform','full','header','latest'))):
  if f.name.startswith('fb-'):continue
  im=Image.open(f);box=crop_box(im,f.name)
  if not box:print('NOCROP',f.name,im.size);box=(0,0)+im.size
- c=im.crop(box);c.convert('RGB').save(OUT/f.name,quality=88,optimize=True,progressive=True)
+ c=im.crop(box).convert("RGB");c.thumbnail((960,960),Image.LANCZOS);c.save(OUT/f.name,quality=80,optimize=True,progressive=True)
  rows.append({'original':'assets/items/'+f.name,'crop':'assets/items/crop/'+f.name,'box':list(map(int,box)),'size':list(c.size),'sha256':hashlib.sha256((OUT/f.name).read_bytes()).hexdigest()})
  print(f.name,im.size,'->',box,c.size)
 (R/'private/owner-photo-crops.json').write_text(json.dumps(rows,indent=1),encoding='utf8')

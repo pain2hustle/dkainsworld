@@ -51,7 +51,7 @@ function updateItemDetails(it){
  link.hidden=!verified;if(verified)link.href=it.sourceUrl;else link.removeAttribute('href');
  const note=galleryDialog.querySelector('.source-note');note.hidden=!it.photos.length;
  if(it.photoCredit){note.textContent='Ask Dylan for photos of what’s in stock right now.';}
- else if(it.platform==='facebook-marketplace'){note.textContent='Photo from Dylan’s Facebook Marketplace listing. Open the listing to see all photos.';}
+ else if(it.platform==='facebook-marketplace'){note.textContent='Photos from Dylan’s Facebook Marketplace listing. Confirm price and pickup with Dylan.';}
  else{note.textContent='';note.hidden=true;}
 }
 """

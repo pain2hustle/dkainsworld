@@ -12,7 +12,7 @@ Call or text (510) 435-0747 · dkain1017dk@gmail.com
 | `site/` | The live website, exactly as it's published. Open `site/index.html` in a browser to see it. |
 | `inventory.csv` | Every item, its price and description. Opens in Excel or Google Sheets. |
 | `inventory.json` | The same item list, in the format the site builder reads. |
-| `source/` | The builder script and style files that make `site/`. |
+| `source/` | The builder script and style files that make `site/`, plus the Facebook import scripts. |
 
 ## Changing prices or items
 
