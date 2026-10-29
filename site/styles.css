@@ -730,3 +730,11 @@ a.peak-title:focus-visible{outline:2px solid #8fe3ff;outline-offset:4px}
 .bux-amt{right:auto;left:calc(12px + 13% + 10px);bottom:auto;top:31%;font-size:clamp(20px,5.5vw,28px)}
 .bux-sub{font-size:clamp(7px,2.1vw,10px);letter-spacing:.08em;text-overflow:clip}
 @media(max-width:360px){.bux-sub{letter-spacing:.04em}}
+
+.footer-legal .social-row{order:5;flex:0 0 100%;display:flex;justify-content:center;align-items:stretch;gap:10px;margin-top:14px}
+.footer-legal .social-row .fb-store-link{margin:0;flex:0 1 300px;width:auto}
+.social-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;color:#fff;font-weight:800}
+.footer-legal .social-link{flex:0 0 50px;width:50px;min-height:50px;border-radius:12px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.social-link svg{width:28px;height:28px}
+.site-menu nav .menu-social{justify-content:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;color:inherit}
+.site-menu nav .menu-social svg{width:26px;height:26px;flex-shrink:0}

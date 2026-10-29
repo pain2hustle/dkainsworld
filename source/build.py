@@ -5,7 +5,7 @@ from PIL import Image
 import marketplace_support as marketplace
 import header_cutout_support
 R=Path(__file__).resolve().parent;P=R/'public';E=html.escape
-assetroot=Path(r'D:\AMH\DKAINSWORLD-Recovery\asset-source\dkainsworld');prov=json.loads((assetroot/'item-photo-provenance.json').read_text(encoding='utf8'))
+assetroot=Path(r'D:\AMH\DKAINSWORLD-Handoff-20261029\build-inputs\approved-photos');prov=json.loads((assetroot/'item-photo-provenance.json').read_text(encoding='utf8'))
 for item in prov['assets']:
  src=assetroot/item['path'];assert hashlib.sha256(src.read_bytes()).hexdigest()==item['sha256'];dst=P/item['path'];dst.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(src,dst)
 (R/'private/item-photo-provenance.json').write_text(json.dumps(prov,indent=2),encoding='utf8')
@@ -22,8 +22,8 @@ HANDOFF=R/'handoff/Images - 19 original item photos and 8 brand assets'
 for x in extra['assets']:
  assert hashlib.sha256((HANDOFF/Path(x['path']).name).read_bytes()).hexdigest()==x['sha256']
  (P/x['path']).unlink(missing_ok=True)
-for name in ['zelle.svg','venmo.svg','cashapp.svg']:shutil.copy2(Path(r'D:\AMH\CreatorReleases\DesignRepair\maria-reference\assets')/name,P/'assets'/name)
-shutil.copy2(Path(r'D:\AMH\CreatorReleases\DesignRepair\source\creator-sites\adina-y-flores\site\assets\paypal-mark.svg'),P/'assets/paypal-mark.svg')
+for name in ['zelle.svg','venmo.svg','cashapp.svg']:shutil.copy2(Path(r'D:\AMH\DKAINSWORLD-Handoff-20261029\build-inputs\payment-icons')/name,P/'assets'/name)
+shutil.copy2(Path(r'D:\AMH\DKAINSWORLD-Handoff-20261029\build-inputs\payment-icons\paypal-mark.svg'),P/'assets/paypal-mark.svg')
 # Branded QR: error correction H (30%) so Dylan's logo can sit in the middle; must still decode with two readers.
 qp=cv2.QRCodeEncoder_Params();qp.correction_level=cv2.QRCODE_ENCODER_CORRECT_LEVEL_H
 qr=cv2.QRCodeEncoder_create(qp).encode('https://dkainsworld.pages.dev/');qr=np.pad(qr,4,constant_values=255);qr=cv2.resize(qr,None,fx=16,fy=16,interpolation=cv2.INTER_NEAREST)
@@ -248,6 +248,17 @@ s.select_one('.site-footer').append(legal)
 (P/'credits.html').unlink(missing_ok=True)
 legal.append(fragment('<button type="button" class="terms-link" data-terms>Terms &amp; privacy</button>'))
 credit_txt='; '.join(f'{E(i["title"])}: {i["photoCredit"]}' for i in items if i['photoCredit'])
+# Dylan's YouTube (owner link 2026-10-29; no Twitch): beside the footer FB button + in the menu.
+# Search-console verification tags (added live in fed42af0) kept so rebuilds don't drop them.
+s.head.find('meta',attrs={'name':'viewport'}).insert_after(fragment('<meta name="msvalidate.01" content="3B1AB9F41AC8378FBF8C16D45D56ABDA"><meta name="google-site-verification" content="zrFVeqtUM0mB-Ts5gt09f4W2t_azIkiGDo1iAJtYKzU">'))
+YT='https://www.youtube.com/@dkainsworld'
+YT_SVG='<svg viewBox="0 0 28 20" aria-hidden="true"><path fill="#FF0000" d="M27.4 3.1A3.5 3.5 0 0 0 24.9.6C22.7 0 14 0 14 0S5.3 0 3.1.6A3.5 3.5 0 0 0 .6 3.1C0 5.3 0 10 0 10s0 4.7.6 6.9a3.5 3.5 0 0 0 2.5 2.5C5.3 20 14 20 14 20s8.7 0 10.9-.6a3.5 3.5 0 0 0 2.5-2.5c.6-2.2.6-6.9.6-6.9s0-4.7-.6-6.9z"/><path fill="#fff" d="M11.2 14.3 18.5 10l-7.3-4.3z"/></svg>'
+def _soc(cls,href,svg,label,txt=''):return f'<a class="social-link {cls}" href="{href}" target="_blank" rel="noopener noreferrer" aria-label="{label}">{svg}{txt}</a>'
+_row=s.new_tag('div');_row['class']='social-row'
+_fb=legal.select_one('.fb-store-link');_fb.insert_before(_row);_row.append(_fb.extract())
+_row.append(fragment(_soc('yt',YT,YT_SVG,'Dkains World on YouTube')))
+_mfb=s.select_one('#site-menu nav .fb-store-link') or s.select_one('#site-menu nav a:last-of-type')
+_mfb.insert_after(fragment(_soc('yt menu-social',YT,YT_SVG,'Dkains World on YouTube','<span>YouTube · Dkains World</span>')))
 legal.append(fragment(f'<button type="button" class="credits-tip" aria-expanded="false" aria-controls="credits-box">Photo credits</button><div class="credits-box" id="credits-box" role="note" hidden>Some listing photos via Wikimedia Commons. {credit_txt}</div>'))
 # Austin's bee-facts box (from his poem page) above the footer; mini version at the bottom of the menu.
 import extra_facts as _xf
@@ -377,6 +388,15 @@ css+=r'''
 css += '\n.payment-link img{flex-shrink:0;padding:4px;border-radius:6px;width:32px;height:32px}.payment-link img[src$="zelle.svg"]{background:#6d1ed4}.payment-link img[src$="venmo.svg"]{background:#008cff}.payment-link img[src$="cashapp.svg"]{background:#008a35}.payment-link img[src$="paypal-mark.svg"]{padding:0}\n'
 css += '\n'+(R/'hero-refinements.css').read_text(encoding='utf8')
 css += marketplace.CSS + header_css + '\n' + (R/'items-v3.css').read_text(encoding='utf8') + '\n' + (R/'sections-v4.css').read_text(encoding='utf8') + '\n' + (R/'punch-egg.css').read_text(encoding='utf8') + chr(10) + (R/'bees-dk.css').read_text(encoding='utf8') + chr(10) + (R/'reviews-slider.css').read_text(encoding='utf8')
+css+='''
+.footer-legal .social-row{order:5;flex:0 0 100%;display:flex;justify-content:center;align-items:stretch;gap:10px;margin-top:14px}
+.footer-legal .social-row .fb-store-link{margin:0;flex:0 1 300px;width:auto}
+.social-link{display:inline-flex;align-items:center;justify-content:center;gap:12px;color:#fff;font-weight:800}
+.footer-legal .social-link{flex:0 0 50px;width:50px;min-height:50px;border-radius:12px;background:#fff;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.social-link svg{width:28px;height:28px}
+.site-menu nav .menu-social{justify-content:flex-start;padding:14px 0;border-bottom:1px solid var(--line);font-size:16px;color:inherit}
+.site-menu nav .menu-social svg{width:26px;height:26px;flex-shrink:0}
+'''
 (P/'styles.css').write_text(css,encoding='utf8')
 readme='''# DKAINSWORLD recovery\n\nAuthoritative recovery workspace: D:/AMH/DKAINSWORLD-Recovery. Original D:/AMH/DKAINSWORLD is untouched. Only public/ belongs in Pages deployment.\n\nEdit inventory.json then run build.py with Python312. Or edit inventory.csv and run build.py --from-csv. The builder exports matching public JSON/CSV, HTML and searchable inquiry cards. Photos are semicolon-separated paths in CSV. Confirm prices/availability with Dylan; do not infer specifications or safety condition.\n\nApproved eight-photo source commit: bf2b4277dafdea90bf2d1d39e0a5217f049d445d. Original screenshot bytes preserved; gallery explicitly distinguishes historical screenshot prices from current asking prices. Pending pipe-wrench, tool-set and backpack photos are not included.\n\nContact: +15104350747. Directions use the exact owner URL without asserting a business address. Payment buttons link only to official platform homepages, not recipient accounts. Real site QR decodes to https://dkainsworld.pages.dev/.\n'''
 # Release README is maintained separately so rebuilds preserve verified release history.

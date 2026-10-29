@@ -32,7 +32,7 @@ for htmlfile in P.rglob('*.html'):
   if u.path=='/':dest=P/'index.html'
   if not dest.is_file():errors.append('Missing local asset '+v)
 for x in json.loads((R/'private/item-photo-provenance.json').read_text())['assets']:
- assert hashlib.sha256((Path('D:/AMH/DKAINSWORLD-Recovery/asset-source/dkainsworld')/x['path']).read_bytes()).hexdigest()==x['sha256']
+ assert hashlib.sha256((Path('D:/AMH/DKAINSWORLD-Handoff-20261029/build-inputs/approved-photos')/x['path']).read_bytes()).hexdigest()==x['sha256']
 extra=json.loads((R/'private/photo-update-provenance.json').read_text(encoding='utf8'))
 assert len(extra['assets'])==11
 for x in extra['assets']:
