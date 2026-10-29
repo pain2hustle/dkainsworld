@@ -1,0 +1,48 @@
+# DKAINSWORLD
+
+> Dylan’s secondhand store in Fremont, California: tools, boards, furniture, backpacks and flea-market finds. Call or text Dylan to confirm an item before you come by.
+
+## Contact
+- Call or text: (510) 435-0747
+- Email: dkain1017dk@gmail.com
+- Directions: https://maps.app.goo.gl/Nu84KZXRDFjCbwpp7?g_st=ac
+- Facebook Marketplace store: https://www.facebook.com/marketplace/profile/100005788064086/
+
+## Payments
+- Zelle: (510) 435-0747 or dkain1017dk@gmail.com
+- Cash App and PayPal: dkain1017dk@gmail.com
+- Chime: ask Dylan
+
+## Terms
+- All items are sold as-is. Inspect the item before paying; paying means you accept it.
+- Contact Dylan within 1 hour of buying if there is a problem. All sales are final.
+- Store credit may be possible the same day if the item is unused and in the same working condition (not guaranteed).
+
+## Items and prices (confirm with Dylan)
+- Performance Tool W41022 jack stand pair: $35
+- Assorted wrenches & mixed tools: Tools from $1 · ask for prices
+- Pipe wrenches: $15 each
+- Assorted / pick-your-own tool sets: $35 each
+- Sockets: $1–$5 each
+- Ratchets: $1–$5 each
+- Tool extensions: Ask for prices
+- Screwdrivers: $3–$4 each · pick 10 for $20
+- Handyman tools: $1–$10 per item
+- Skateboards: $20–$50
+- Longboards: $30–$70
+- Dressers: $100–$180
+- Couches: $399
+- Mirrors: $25–$70
+- Orange & yellow Dragon Ball Z bags: $20 for both · $15 each
+- Blue/black Kid Goku backpack: $30
+- Flea market finds: Ask for prices
+- Vintage Milwaukee metal tool box with mixed tools (Klein & more): $35 — https://www.facebook.com/marketplace/item/28444710648484140/
+- Covercraft UVS100 Mustang windshield sunshade (silver): $25 — https://www.facebook.com/marketplace/item/2106563970226121/
+- Cobra 8-channel HD surveillance system, 4 cameras + 1TB HDD: $140 — https://www.facebook.com/marketplace/item/1103700079241670/
+
+## Site
+- Home: https://dkainsworld.pages.dev/
+- Item data (JSON): https://dkainsworld.pages.dev/inventory.json
+- Item data (CSV): https://dkainsworld.pages.dev/inventory.csv
+
+Updated 2026-10-29.

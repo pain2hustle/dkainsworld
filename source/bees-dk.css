@@ -1,0 +1,47 @@
+/* Bee box, matched to DKAINSWORLD (navy + neon) */
+.bees-wrap{padding:28px clamp(20px,4.45vw,80px) 40px}
+.bees{max-width:900px;margin:0 auto;background:linear-gradient(160deg,rgba(14,22,42,.86),rgba(8,12,24,.8));border:1px solid rgba(143,227,255,.38);border-radius:18px;padding:16px 18px;box-shadow:0 0 22px rgba(40,140,255,.18),0 14px 40px rgba(0,0,0,.45);backdrop-filter:blur(8px)}
+.bhead{display:flex;align-items:center;gap:10px}
+.bamh img{display:block;width:44px;height:44px}
+.blogo img{display:block;width:26px;height:26px;opacity:.85}
+.btitle{flex:1;min-width:0}
+.btitle b{display:block;color:#dff58f;font-size:13px;letter-spacing:.12em}
+.btitle span{display:block;color:#97a6ba;font-size:11px}
+.ball{min-height:40px;padding:6px 12px;border-radius:10px;border:1px solid rgba(223,245,143,.45);background:rgba(255,255,255,.06);color:#dff58f;font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.bfact{display:block;width:100%;text-align:left;margin:12px 0 0;padding:0;border:0;background:none;color:#eef2f8;font:inherit;cursor:pointer;min-height:4.5em;transition:opacity .35s}
+.bfact.fade{opacity:0}
+.bfact b{color:#8fe3ff;display:block;font-size:16px;margin-bottom:2px;text-shadow:0 0 8px rgba(70,190,255,.5)}
+.bfact span{color:#d6deea;font-size:14px;line-height:1.5}
+.blist{margin:12px 0 0;padding:0 4px 0 22px;max-height:min(55vh,460px);overflow-y:auto;overscroll-behavior:contain;color:#d6deea;font-size:13px}
+.blist li{margin:0 0 10px}.blist li b{color:#8fe3ff}.blist .fact-source{display:none}
+/* menu mini bee box */
+.bmini{display:flex;align-items:center;gap:10px;width:100%;margin-top:16px;padding:10px 12px;border-radius:14px;border:1px solid rgba(143,227,255,.38);background:rgba(10,16,30,.7);color:#eef2f8;font:inherit;text-align:left;cursor:pointer}
+.bmini img{width:22px;height:22px;flex:0 0 22px}
+.bmini small{display:block;color:#dff58f;font-size:10px;font-weight:800;letter-spacing:.12em}
+.bmini-fact b{display:block;font-size:13px;color:#8fe3ff}
+/* tiny blended photo credits */
+.tiny-credits{grid-column:1/-1;margin:6px 0 0;font-size:9px;line-height:1.4;color:rgba(230,236,244,.38);text-shadow:none}
+.tiny-credits a{color:inherit;text-decoration:none}
+/* Photo credits: tiny faint label, tap opens a small box, tap/scroll anywhere closes */
+.credits-tip{grid-column:1/-1;justify-self:start;min-height:32px;padding:4px 0;border:0;background:none;color:rgba(230,236,244,.42);font:inherit;font-size:10px;cursor:pointer;text-shadow:none}
+.credits-box{position:fixed;z-index:60;left:50%;bottom:calc(var(--bottom) + 14px);transform:translateX(-50%);width:min(420px,calc(100% - 32px));max-height:40vh;overflow:auto;padding:12px 14px;border-radius:12px;border:1px solid rgba(143,227,255,.35);background:rgba(10,14,26,.94);color:#c9d3e0;font-size:11px;line-height:1.5;box-shadow:0 12px 30px rgba(0,0,0,.5)}
+.credits-box a{color:#8fe3ff;text-decoration:none}
+.request-form .req-send{display:flex;align-items:center;justify-content:center;margin-top:6px;text-align:center}
+.ball{display:block;margin:14px 0 0}
+.bmini{align-items:flex-start}
+.bmini-fact span{display:block;margin-top:2px;font-size:11.5px;line-height:1.4;color:#d6deea;font-weight:400}
+.bnav{display:flex;align-items:center;gap:10px;margin-top:14px}
+.bnav .ball{margin:0}
+.barrow{display:grid;place-items:center;width:44px;height:40px;border-radius:10px;border:1px solid rgba(223,245,143,.45);background:rgba(255,255,255,.06);color:#dff58f;font:inherit;font-size:24px;line-height:1;cursor:pointer}
+.barrow:hover{background:rgba(223,245,143,.14)}
+.barrow{border:0;background:none;width:40px;font-size:34px;font-weight:300}
+.barrow:hover{background:none;color:#fff}
+.barrow:focus-visible{outline:2px solid #8fe3ff;border-radius:6px}
+.blist .fact-source{display:inline-block;margin-left:4px;font-size:10.5px;color:#9fdc7a;text-decoration:underline}
+.bfact .bnum{display:block;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#97a6ba;margin-bottom:4px}
+/* Arrows on the sides of the fact, blue glow, no box */
+.bstage{display:grid;grid-template-columns:34px minmax(0,1fr) 34px;align-items:center;gap:4px;margin-top:10px}
+.bstage .bfact{margin:0}
+.bstage .barrow{width:34px;height:64px;border:0;background:none;padding:0;color:#8fe3ff;font-size:40px;font-weight:300;line-height:1;text-shadow:0 0 8px rgba(70,190,255,.95),0 0 18px rgba(40,120,255,.7);cursor:pointer}
+.bstage .barrow:hover{color:#fff;text-shadow:0 0 10px #8fe3ff,0 0 24px #2a7dff}
+.bnav{justify-content:center}

@@ -1,0 +1,302 @@
+/* How-it-works as dark bordered cards with icon tiles (owner-requested, Lanna Thai card style, DKAINSWORLD colours). */
+.how-section[data-cards]{max-width:none;background:radial-gradient(ellipse at 80% 0%,rgba(72,64,140,.35),transparent 60%),linear-gradient(180deg,#141b2b,#10151f);color:#eef2f8;padding:72px clamp(20px,4.45vw,80px)}
+.how-section[data-cards] .how-intro .eyebrow{color:#dff58f}
+.how-section[data-cards] h2{color:#fff}
+.how-section[data-cards] .how-intro>p:not(.eyebrow){color:#c3cddb}
+.how-section[data-cards] .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px;counter-reset:none}
+.how-section[data-cards] .step-card{position:relative;overflow:hidden;display:flex;align-items:center;gap:18px;padding:20px 22px;border:1px solid rgba(214,240,142,.38);border-radius:22px;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border-top:1px solid rgba(214,240,142,.38)}
+.how-section[data-cards] .step-card::after{content:"";position:absolute;right:-46px;top:-46px;width:130px;height:130px;border:1px solid rgba(214,240,142,.22);border-radius:50%;pointer-events:none}
+.how-section[data-cards] .step-card-hot{background:linear-gradient(135deg,rgba(214,240,142,.14),rgba(110,90,200,.10));border-color:rgba(214,240,142,.6)}
+.how-section[data-cards] .step-icon{flex:0 0 auto;display:grid;place-items:center;width:62px;height:62px;border:1px solid rgba(214,240,142,.45);border-radius:16px;background:radial-gradient(circle at 30% 25%,rgba(214,240,142,.16),rgba(0,0,0,.25));color:#dff58f;font-size:0}
+.how-section[data-cards] .step-icon svg{width:30px;height:30px}
+.how-section[data-cards] .step-card small{display:block;font-size:11px;letter-spacing:.16em;color:#a9b6c8;font-weight:700}
+.how-section[data-cards] .step-card h3{margin:4px 0 4px;font-size:20px;letter-spacing:.02em;text-transform:uppercase;color:#fff}
+.how-section[data-cards] .step-card p{margin:0;font-size:14px;line-height:1.5;color:#cfd8e4}
+@media(min-width:900px){.how-section[data-cards] .steps{grid-template-columns:repeat(3,minmax(0,1fr))}.how-section[data-cards] .step-card{flex-direction:column;align-items:flex-start}}
+@media(max-width:520px){.how-section[data-cards]{padding-top:52px;padding-bottom:52px}.how-section[data-cards] .step-card{padding:16px;gap:14px}.how-section[data-cards] .step-icon{width:54px;height:54px}.how-section[data-cards] .step-card h3{font-size:17px}}
+
+/* Footer: owner's planet-over-clouds scene behind, owner's Earth as the first part. */
+.site-footer{background:linear-gradient(180deg,rgba(10,13,24,.92) 0%,rgba(10,13,24,.62) 38%,rgba(10,13,24,.2) 70%,rgba(10,13,24,.35) 100%),url('/assets/footer-planet.webp') 50% 72%/cover no-repeat,#0b0f1a}
+.footer-art[data-globe]{max-width:340px;justify-self:center}
+.footer-art[data-globe]{width:100%;display:block}.footer-globe{position:relative;width:100%;aspect-ratio:1;-webkit-mask-image:radial-gradient(circle at 50% 50%,#000 51%,transparent 55%);mask-image:radial-gradient(circle at 50% 50%,#000 51%,transparent 55%)}.footer-globe canvas{display:block;width:100%!important;height:100%!important}
+.site-footer .footer-copy{text-shadow:0 2px 10px rgba(0,0,0,.6)}
+@media(max-width:520px){.site-footer{padding-bottom:120px}.footer-art[data-globe]{max-width:260px}}
+@media(min-width:900px){.how-section[data-cards]{display:block}.how-section[data-cards] .how-intro{max-width:720px;margin-bottom:34px}.how-section[data-cards] .step-card h3{font-size:19px}}
+/* Footer: logo floats over the top of the globe (transparent cutout, no box) */
+.footer-art[data-globe]{position:relative;display:flex;flex-direction:column;align-items:center}
+.footer-emblem{position:relative;z-index:2;width:82%;height:auto;margin-bottom:-12%;width:74%;filter:drop-shadow(0 14px 18px rgba(0,0,0,.6)) drop-shadow(0 0 22px rgba(90,170,255,.25))}
+.footer-art[data-globe] .footer-globe{z-index:1}
+/* (Cloud mist overlay removed: it softened the owner's picture.) */
+.site-footer{position:relative;isolation:isolate;overflow:hidden}
+.payment-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+button.payment-link{font:inherit;font-weight:800;text-align:left;cursor:pointer;color:inherit;width:100%}
+.payment-zelle{border-color:#6d1ed4;box-shadow:inset 0 0 0 1px #6d1ed4}
+@media(max-width:800px){.payments-section .payment-grid{grid-template-columns:1fr}.site-menu .payment-grid{grid-template-columns:1fr}}
+/* Dylan's logo brands the steps section */
+.how-section[data-cards]{position:relative}
+.how-brand{display:block;width:clamp(170px,46vw,240px);height:auto;margin:0 0 18px -6px;filter:drop-shadow(0 12px 18px rgba(0,0,0,.55)) drop-shadow(0 0 20px rgba(90,170,255,.22))}
+@media(min-width:900px){.how-brand{position:absolute;right:clamp(20px,4.45vw,80px);top:40px;width:clamp(240px,24vw,330px);margin:0}}
+/* Text Dylan buttons */
+.hero .hero-actions{grid-template-columns:repeat(6,minmax(0,1fr))}.hero .hero-actions>:nth-child(1),.hero .hero-actions>:nth-child(2){grid-column:span 3}.hero .hero-actions>:nth-child(n+3){grid-column:span 2}.hero .hero-actions .button{white-space:nowrap}
+.footer-text{display:inline-flex;align-items:center;min-height:44px;color:#dff58f;font-weight:700;margin-left:14px}
+.bottom-nav{grid-template-columns:repeat(5,1fr)}
+.bottom-nav a{font-size:9.5px;text-align:center}
+.contact-actions .button svg{width:18px;height:18px}
+
+/* Warehouse behind most of the page (fixed backdrop), planet footer at the bottom */
+body{background:#0f1422}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:linear-gradient(180deg,rgba(12,16,28,.80),rgba(12,16,28,.88)),url('/assets/scene-warehouse.webp') 50% 60%/cover no-repeat;pointer-events:none}
+@media(max-width:800px){body::before{background:linear-gradient(180deg,rgba(12,16,28,.80),rgba(12,16,28,.88)),url('/assets/scene-warehouse-tall.webp') 50% 40%/cover no-repeat}}
+main,.browse-section,.price-list,.how-section[data-cards],.contact-section,.payments-section{background:transparent}
+.how-section[data-cards]{background:linear-gradient(180deg,rgba(14,19,32,.35),rgba(14,19,32,.55))}
+.browse-section,.price-list,.contact-section,.payments-section{color:#eef2f8}
+.browse-section h2,.price-list h2,.contact-section h2,.payments-section h2{color:#fff}
+.browse-section .eyebrow,.price-list .eyebrow,.contact-section .eyebrow,.payments-section .eyebrow{color:#dff58f}
+.browse-section .section-heading>p,.results-line,.results-line span,#result-count,.search-form label,.price-list>p:not(.eyebrow),.payments-section>p:not(.eyebrow),.photo-credits,.contact-section p,.contact-actions span{color:#c9d3e0}
+.filters button{background:rgba(255,255,255,.08);border-color:rgba(223,245,143,.35);color:#eef2f8}
+.filters button[aria-pressed="true"]{background:#dff58f;border-color:#dff58f;color:#141b1d}
+.listing-note{background:rgba(14,20,34,.72);border-color:rgba(223,245,143,.4);color:#eef2f8}
+.listing-note p{color:#c9d3e0}.listing-note h3{color:#fff}.listing-note a{color:#dff58f}
+.price-list>ul a{border-bottom-color:rgba(255,255,255,.14);color:#eef2f8}
+.price-list>ul a b{color:#dff58f}
+.contact-section{background:rgba(14,20,34,.6);border-top:1px solid rgba(223,245,143,.2);border-bottom:1px solid rgba(223,245,143,.2)}
+.empty-state{color:#eef2f8}
+/* Branded menu: logo on a dark warehouse backdrop */
+.site-menu{background:linear-gradient(180deg,rgba(13,18,30,.86),rgba(13,18,30,.94)),url('/assets/scene-warehouse-tall.webp') 50% 30%/cover no-repeat,#121827;color:#eef2f8;border-color:rgba(223,245,143,.35)}
+.site-menu .modal-heading{align-items:center}
+.menu-logo{display:block;width:min(230px,58vw);height:auto;filter:drop-shadow(0 10px 16px rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(90,170,255,.25))}
+.site-menu nav a{color:#eef2f8;border-bottom-color:rgba(255,255,255,.14)}
+.site-menu nav a:hover{color:#dff58f}
+.site-menu .payment-note{color:#c9d3e0}
+.site-menu .menu-qr{background:rgba(255,255,255,.96);color:#141b1d}
+.site-menu .close-modal{background:rgba(255,255,255,.1);border-color:rgba(223,245,143,.45);color:#fff}
+/* Branded QR popup */
+.qr-dialog{background:linear-gradient(180deg,rgba(13,18,30,.88),rgba(13,18,30,.95)),url('/assets/scene-warehouse-tall.webp') 50% 30%/cover no-repeat,#121827;color:#eef2f8;border-color:rgba(223,245,143,.35)}
+.qr-dialog .modal-heading h2{color:#fff}
+.qr-dialog>img{border-radius:18px;padding:6px;background:#fff;box-shadow:0 18px 40px rgba(0,0,0,.5)}
+.qr-dialog .qr-url{color:#dff58f}
+.qr-dialog .button-dark{background:#dff58f;color:#141b1d;border-color:#dff58f}
+.qr-dialog .close-modal{background:rgba(255,255,255,.1);border-color:rgba(223,245,143,.45);color:#fff}
+.payment-link,.payment-link span,button.payment-link{color:#141b1d}
+.payment-link small{color:#59605e}
+/* Dark bottom nav to match the branded page */
+.bottom-nav{background:rgba(14,19,32,.94);border-top:1px solid rgba(223,245,143,.25)}
+.bottom-nav a{color:#e6ecf4}
+.bottom-nav a[href^="tel:"]{background:#dff58f;color:#141b1d}
+.bottom-nav a:hover{background:rgba(255,255,255,.08)}.bottom-nav a[href^="tel:"]:hover{background:#ecfaa8}
+.payments-section .qr-bottom,.empty-state .button-dark{background:#dff58f;color:#141b1d;border-color:#dff58f}
+.contact-actions .fb-store-link{justify-content:center;min-height:48px;font-size:13px}
+/* Sticky header + bottom nav + Facebook dock: tuck away while scrolling, come back when scrolling stops */
+.site-header{position:sticky;top:0;z-index:12;transition:transform .25s ease}
+.bottom-nav{transition:transform .25s ease}
+body.is-scrolling .site-header{transform:translateY(-100%)}
+body.is-scrolling .bottom-nav{transform:translateY(110%)}
+section[id],[id=categories]{scroll-margin-top:96px}
+.fb-dock{position:fixed;z-index:11;left:50%;bottom:calc(var(--bottom) + env(safe-area-inset-bottom) + 10px);width:min(460px,calc(100% - 32px));transform:translate(-50%,0);display:flex;justify-content:center;align-items:center;gap:10px;min-height:46px;padding:8px 16px;border:0;border-radius:12px;background:#1877f2;color:#fff;font-size:16px;font-weight:800;letter-spacing:.01em;box-shadow:0 10px 26px rgba(0,0,0,.4);transition:transform .25s ease,opacity .25s ease}
+.fb-dock:hover{background:#0f63d0;color:#fff}
+.fb-dock .facebook-mark{width:26px;height:26px;flex-basis:26px;border-radius:50%;background:#fff;color:#1877f2;font-size:24px;padding-top:5px}
+body:not(.past-hero) .fb-dock,body.is-scrolling .fb-dock{opacity:0;pointer-events:none;transform:translate(-50%,18px)}
+@media(prefers-reduced-motion:reduce){.site-header,.bottom-nav,.fb-dock{transition:none}}
+/* Footer legal line + FB button sit low, in the grass */
+.footer-legal{grid-column:1/-1;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;padding-top:clamp(140px,26vw,260px);text-shadow:0 2px 8px rgba(0,0,0,.7)}
+.footer-legal small{color:#e6ecf4;font-size:12px}
+.footer-legal .fb-store-link{margin-top:0}
+@media(max-width:520px){.site-footer{padding-bottom:calc(var(--bottom) + 84px)}.footer-legal{padding-top:150px}}
+/* Item list jump controls (phone) */
+.list-jump{display:none}
+@media(max-width:800px){
+ .list-jump{display:flex;align-items:center;justify-content:space-between;gap:10px;margin:0 0 10px}
+ .list-jump button{min-height:44px;min-width:96px;padding:8px 14px;border-radius:12px;border:1px solid rgba(223,245,143,.5);background:rgba(14,20,34,.8);color:#dff58f;font:inherit;font-size:14px;font-weight:800}
+ #list-pos{font-size:13px;font-weight:700;color:#c9d3e0}
+ /* one item per phone-height window, snap as you swipe; page doesn't move */
+ #inventory-grid{display:block;position:relative;height:calc(100svh - 230px);min-height:460px;overflow-y:auto;scroll-snap-type:y mandatory;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;border-radius:18px;scrollbar-width:thin}
+ #inventory-grid .item-card{height:100%;margin:0 0 12px;scroll-snap-align:start;scroll-snap-stop:always;display:flex;flex-direction:column;overflow:hidden}
+ #inventory-grid .item-card .item-photo{height:auto;flex:0 0 52%}
+ #inventory-grid .item-card .card-body{flex:1 1 auto;min-height:0;display:flex;flex-direction:column}
+ #inventory-grid .item-card .card-body>p:not(.eyebrow):not(.asking-price):not(.availability){display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+ #inventory-grid .item-card .card-body h3{font-size:22px}
+}
+/* Price list v2: contained panel, photo thumbs, price tags */
+.pl-panel{border:1px solid rgba(223,245,143,.32);border-radius:22px;background:linear-gradient(180deg,rgba(18,25,42,.88),rgba(12,17,30,.92));box-shadow:0 18px 40px rgba(0,0,0,.35);overflow:hidden}
+.pl-head{display:flex;justify-content:space-between;padding:12px 18px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:#a9b6c8;border-bottom:1px solid rgba(255,255,255,.1)}
+.price-list .pl-panel>ul{list-style:none;margin:0;padding:6px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:4px 8px}
+.price-list .pl-panel>ul a{display:flex;align-items:center;gap:12px;padding:8px 10px;border:0;border-radius:14px;color:#eef2f8;font-size:14px;transition:background .15s}
+.price-list .pl-panel>ul a:hover,.price-list .pl-panel>ul a:focus-visible{background:rgba(223,245,143,.08)}
+.price-list .pl-panel img{flex:0 0 56px;width:56px;height:56px;object-fit:cover;border-radius:12px;background:#1d2538}
+.pl-name{flex:1 1 auto;min-width:0;font-weight:700;line-height:1.25;overflow-wrap:anywhere}
+.pl-name small{display:block;margin-top:3px;font-size:11px;font-weight:600;color:#97a6ba;letter-spacing:.03em}
+.price-list .pl-panel>ul a b{flex:0 1 auto;max-width:44%;padding:6px 10px;border-radius:999px;background:#dff58f;color:#141b1d;font-size:12.5px;font-weight:800;line-height:1.2;text-align:center}
+.price-list .pl-panel>ul a i{font-style:normal;font-size:22px;color:#6f7f95;margin-left:-4px}
+@media(max-width:800px){
+ .price-list .pl-panel>ul{grid-template-columns:1fr;max-height:min(62svh,560px);overflow-y:auto;overscroll-behavior:contain}
+ .price-list .pl-panel>ul a{padding:8px}
+ .price-list .pl-panel img{width:50px;height:50px;flex-basis:50px}
+}
+.item-card,.item-card .card-body{color:#141b1d}.item-card h3{color:#141b1d}.item-card .eyebrow{color:#5d6c60}.item-card .card-body>p{color:#3d4740}
+@media(max-width:800px){#inventory-grid{height:calc(100svh - 240px)}}
+/* Request an item */
+.request-form{margin-top:22px;padding:18px;border:1px solid rgba(223,245,143,.35);border-radius:18px;background:rgba(10,14,26,.55);display:grid;gap:8px;max-width:520px}
+.request-form h3{margin:0 0 4px;font-size:18px;color:#fff}
+.request-form label{font-size:12px;font-weight:700;color:#c9d3e0}
+.request-form input{min-height:46px;padding:10px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:#fff;color:#141b1d;font:inherit;font-size:16px}
+.request-form input[aria-invalid=true]{border-color:#ff8a8a;box-shadow:0 0 0 2px rgba(255,138,138,.35)}
+.request-form .button{margin-top:6px;justify-content:center}
+.req-note{margin:2px 0 0;font-size:11px;color:#97a6ba}
+/* All Facebook store buttons share the blue Market Store look */
+.hero .hero-note .fb-store-link,.contact-actions .fb-store-link,.footer-legal .fb-store-link,.section-heading .fb-store-link,.site-menu nav .fb-store-link{background:#1877f2;border-color:#1877f2;color:#fff;font-weight:800;border-radius:12px;box-shadow:0 8px 20px rgba(0,0,0,.3)}
+.hero .hero-note .fb-store-link{font-size:15px;min-height:48px}
+.hero .hero-note .fb-store-link .facebook-mark,.contact-actions .fb-store-link .facebook-mark,.footer-legal .fb-store-link .facebook-mark,.section-heading .fb-store-link .facebook-mark,.site-menu nav .fb-store-link .facebook-mark{border-radius:50%;background:#fff;color:#1877f2;font-size:22px;padding-top:5px}
+.fb-store-link:hover{background:#0f63d0;color:#fff}
+.request-form{position:relative;padding-top:20px}
+.req-logo{width:150px;height:auto;justify-self:start;margin:-4px 0 2px -4px;filter:drop-shadow(0 10px 14px rgba(0,0,0,.55)) drop-shadow(0 0 16px rgba(90,170,255,.22))}
+#request-item{scroll-margin-top:96px}
+/* Footer logo above the globe (not on it), soft faded glow behind */
+.footer-emblem{width:70%;margin-bottom:6px}
+.footer-art[data-globe]::before{content:"";position:absolute;z-index:0;left:50%;top:0;width:96%;aspect-ratio:1100/760;transform:translate(-50%,-4%);background:radial-gradient(ellipse at 50% 55%,rgba(70,120,255,.28),rgba(120,70,220,.12) 45%,transparent 70%);pointer-events:none}
+.footer-art[data-globe] .footer-globe{margin-top:-4%}
+/* Phone item window: 3 compact rows per screen, scroll inside for more */
+@media(max-width:800px){
+ #inventory-grid{scroll-snap-type:y proximity}
+ #inventory-grid .item-card{height:calc((100% - 24px) / 3);min-height:178px;flex-direction:row;margin:0 0 12px;scroll-snap-stop:normal;border-radius:16px}
+ #inventory-grid .item-card .item-photo{flex:0 0 38%;height:100%;border-radius:0}
+ #inventory-grid .item-card .item-photo>span{bottom:8px;right:8px;padding:5px 8px;font-size:10px}
+ #inventory-grid .item-card .item-photo .photo-tag{top:8px;left:8px;padding:4px 7px;font-size:9px}
+ #inventory-grid .item-card .card-body{padding:10px 12px;gap:0}
+ #inventory-grid .item-card .card-body .eyebrow{font-size:9px;margin:0}
+ #inventory-grid .item-card .card-body h3{font-size:16px;line-height:1.2;margin:3px 0 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+ #inventory-grid .item-card .card-body .asking-price{font-size:15px;margin:4px 0 0}
+ #inventory-grid .item-card .card-body>p:not(.eyebrow):not(.asking-price):not(.availability){font-size:12px;line-height:1.35;margin:4px 0 0;-webkit-line-clamp:2}
+ #inventory-grid .item-card .card-body .availability{display:none}
+ #inventory-grid .item-card .card-links{flex-direction:row;gap:8px;margin-top:auto;padding-top:6px}
+ #inventory-grid .item-card .card-link{padding-top:6px;border-top:0;font-size:12px;flex:1}
+ #inventory-grid .item-card .card-fb-link{min-height:34px;padding:6px 8px;font-size:11px;gap:6px}
+ #inventory-grid .item-card .card-fb-link .facebook-mark{width:18px;height:18px;flex-basis:18px;font-size:18px}
+}
+.site-menu nav a[href^="mailto:"]{overflow-wrap:anywhere}
+.footer-email{display:flex;align-items:center;min-height:44px;color:#dff58f;font-weight:700;overflow-wrap:anywhere}
+/* Neon welcome line + pulsing star */
+.hero .eyebrow{display:inline-flex;align-items:center;gap:12px;padding:8px 16px 8px 12px;border-radius:999px;background:rgba(6,12,28,.72);border:1px solid rgba(90,190,255,.45);color:#8fe3ff;text-shadow:0 0 6px rgba(70,190,255,.95),0 0 16px rgba(40,120,255,.7);box-shadow:0 0 18px rgba(40,140,255,.25),inset 0 0 12px rgba(40,140,255,.15)}
+.hero .tiny-star{color:#9ff0ff;text-shadow:0 0 8px #47c8ff,0 0 18px #2a7dff}
+@keyframes star-pulse{0%,100%{transform:scale(1);opacity:.85;text-shadow:0 0 6px #47c8ff,0 0 12px #2a7dff}50%{transform:scale(1.28);opacity:1;text-shadow:0 0 12px #8fe3ff,0 0 26px #2a7dff,0 0 40px #2a7dff}}
+@media(prefers-reduced-motion:no-preference){.hero .tiny-star{animation:star-pulse 2.4s ease-in-out infinite}}
+@media(prefers-reduced-motion:reduce){.hero .tiny-star{animation:none}}
+/* Compact branded "before you come by" note */
+.listing-note{padding:14px 16px;gap:14px;align-items:center;border-style:solid;border-radius:16px;margin-top:20px}
+.listing-note>svg{display:none}
+.note-logo{flex:0 0 auto;width:86px;height:auto;filter:drop-shadow(0 6px 10px rgba(0,0,0,.5))}
+.listing-note>div{flex:1 1 180px}
+.listing-note h3{font-size:16px;margin:0 0 2px}
+.listing-note p{font-size:13px;margin:0}
+@media(max-width:800px){.listing-note{flex-wrap:nowrap}.listing-note>a{display:none}}
+/* Footer: owner's picture as-is (enhanced), no dark tint; glass panel keeps text readable */
+.site-footer{background:url('/assets/footer-planet.webp') 50% 30%/cover no-repeat,#0b0f1a}
+.site-footer .footer-copy{background:rgba(8,12,24,.5);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:16px 18px;backdrop-filter:blur(4px)}
+.footer-legal{padding-top:clamp(220px,40vw,420px)}
+.credits-link{font-size:11px;color:#e6ecf4;text-decoration:underline;min-height:44px;display:inline-flex;align-items:center}
+@media(min-width:801px){.site-footer{min-height:760px;background-position:50% 32%}}
+.listing-note>:not(img):not(div):not(a){display:none}
+/* Footer info box: branded frosted card, logo + blurred logo glow, 2x2 neon pill actions */
+.site-footer .footer-copy{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;gap:10px;padding:18px;border-radius:20px;border:1px solid rgba(143,227,255,.38);background:linear-gradient(160deg,rgba(14,22,42,.72),rgba(8,12,24,.62));backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);box-shadow:0 18px 40px rgba(0,0,0,.4),inset 0 0 30px rgba(40,140,255,.12)}
+.site-footer .footer-copy::before{content:"";position:absolute;inset:-20%;z-index:-1;background:url('/assets/dkainsworld-emblem.webp') 50% 40%/70% auto no-repeat;filter:blur(26px);opacity:.35}
+.footer-card-logo{grid-column:1/-1;justify-self:center;width:min(200px,60%);height:auto;filter:drop-shadow(0 8px 14px rgba(0,0,0,.6)) drop-shadow(0 0 16px rgba(90,170,255,.3))}
+.site-footer .footer-copy>strong{grid-column:1/-1;text-align:center;font-size:20px}
+.site-footer .footer-copy>p{grid-column:1/-1;text-align:center;margin:-4px 0 4px}
+.site-footer .footer-copy>a{display:flex;align-items:center;justify-content:center;gap:6px;min-height:46px;margin:0;padding:8px 10px;border-radius:12px;border:1px solid rgba(223,245,143,.45);background:rgba(255,255,255,.06);color:#eef2f8;font-size:13px;font-weight:800;text-align:center;overflow-wrap:anywhere}
+.site-footer .footer-copy>a:hover{background:rgba(223,245,143,.14)}
+.site-footer .footer-copy>a[href^="tel:"]{background:#dff58f;color:#141b1d;border-color:#dff58f}
+.site-footer .footer-copy>a.footer-email{grid-column:1/-1;color:#8fe3ff;border-color:rgba(143,227,255,.5)}
+/* Bottom of footer: tidy row, AMH lowest */
+.footer-legal{padding-top:clamp(200px,38vw,400px);align-items:center}
+.footer-legal small{font-size:12px}
+.amh-credit{border-top:0;margin-top:clamp(70px,16vw,140px);padding-top:0}
+@media(max-width:520px){.amh-credit a{max-width:86%;padding:10px 12px;gap:10px}.amh-credit span>strong{font-size:14px}.amh-credit em{display:none}.amh-credit>a>strong{font-size:11px}}
+/* Footer logo + globe arrive when scrolled into view */
+@keyframes foot-globe-in{from{opacity:0;transform:scale(.6)}to{opacity:1;transform:none}}
+@keyframes foot-logo-in{0%{opacity:0;transform:translateY(-70px)}65%{opacity:1;transform:translateY(6px)}100%{opacity:1;transform:none}}
+@media(prefers-reduced-motion:no-preference){
+ .footer-art[data-globe]:not(.arrived) .footer-globe,.footer-art[data-globe]:not(.arrived) .footer-emblem{opacity:0}
+ .footer-art[data-globe].arrived .footer-globe{animation:foot-globe-in 1s cubic-bezier(.2,.8,.2,1) both}
+ .footer-art[data-globe].arrived .footer-emblem{animation:foot-logo-in 1s cubic-bezier(.3,.7,.3,1) .45s both}
+}
+/* Terms popup */
+.terms-dialog{width:min(640px,calc(100vw - 24px));max-height:calc(100dvh - 32px);background:linear-gradient(180deg,rgba(13,18,30,.97),rgba(13,18,30,.99)),#121827;color:#eef2f8;border:1px solid rgba(143,227,255,.35)}
+.terms-dialog .modal-heading h2{color:#fff}
+.terms-dialog .close-modal{background:rgba(255,255,255,.1);border-color:rgba(223,245,143,.45);color:#fff}
+.terms-body h3{margin:16px 0 6px;color:#dff58f;font-size:14px;letter-spacing:.08em;text-transform:uppercase}
+.terms-body ul{margin:0;padding-left:18px;display:grid;gap:8px;color:#d6deea;font-size:14px;line-height:1.5}
+.terms-note{margin-top:18px;font-size:11px;color:#97a6ba}
+.terms-link{min-height:32px;padding:4px 0;border:0;background:none;color:rgba(230,236,244,.7);font:inherit;font-size:11px;text-decoration:underline;cursor:pointer}
+.menu-terms{padding:14px 0;border:0;border-bottom:1px solid rgba(255,255,255,.14);background:none;color:#eef2f8;font:inherit;font-size:16px;font-weight:700;text-align:left;cursor:pointer}
+.terms-body li b{color:#fff}
+.payment-link img[src*="zelle.svg"]{background:#6d1ed4}.payment-link img[src*="venmo.svg"]{background:#008cff}.payment-link img[src*="cashapp.svg"]{background:#008a35}.payment-link img[src*="paypal-mark.svg"]{padding:0;background:none}
+.payment-link span.pay-mark{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;border-radius:8px;background:#1ec677;color:#fff;font-weight:900;font-size:18px}
+/* Step cards are links */
+.how-section[data-cards] .step-card{padding:0}
+.how-section[data-cards] .step-link{display:flex;align-items:center;gap:18px;width:100%;padding:20px 22px;color:inherit;text-decoration:none;border-radius:22px}
+.how-section[data-cards] .step-link:hover,.how-section[data-cards] .step-link:focus-visible{background:rgba(223,245,143,.06)}
+.how-section[data-cards] .step-link:focus-visible{outline:3px solid #8fe3ff;outline-offset:2px}
+.step-go{margin-left:auto;font-style:normal;font-size:30px;color:#dff58f;line-height:1}
+@media(min-width:900px){.how-section[data-cards] .step-link{flex-direction:column;align-items:flex-start}.step-go{position:absolute;right:18px;bottom:14px}}
+@media(max-width:520px){.how-section[data-cards] .step-link{padding:16px;gap:14px}}
+/* Step cards: icon with no box; pulsing neon border + slow light sweep (Royal Luxe / poem style) */
+.how-section[data-cards] .step-icon{width:auto;height:auto;flex:0 0 auto;border:0;background:none;border-radius:0;padding:0 4px}
+.how-section[data-cards] .step-icon svg{width:38px;height:38px;filter:drop-shadow(0 0 6px rgba(223,245,143,.55))}
+.how-section[data-cards] .step-card::after{display:none}
+.how-section[data-cards] .step-card{border-color:rgba(214,240,142,.4)}
+.how-section[data-cards] .step-card::before{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;background:linear-gradient(105deg,transparent 40%,rgba(255,255,255,.10) 49%,rgba(223,245,143,.22) 50%,rgba(255,255,255,.10) 51%,transparent 60%) 120% 0/260% 100% no-repeat;opacity:0}
+@keyframes step-pulse{0%,100%{border-color:rgba(214,240,142,.32);box-shadow:0 0 0 rgba(223,245,143,0),inset 0 0 0 rgba(223,245,143,0)}50%{border-color:rgba(223,245,143,.9);box-shadow:0 0 18px rgba(223,245,143,.28),inset 0 0 14px rgba(223,245,143,.08)}}
+@keyframes step-sweep{0%,15%{background-position:120% 0;opacity:0}30%,55%{opacity:1}70%,100%{background-position:-20% 0;opacity:0}}
+@keyframes step-icon-glow{0%,100%{filter:drop-shadow(0 0 4px rgba(223,245,143,.4))}50%{filter:drop-shadow(0 0 10px rgba(223,245,143,.85))}}
+@media(prefers-reduced-motion:no-preference){
+ .how-section[data-cards] .step-card{animation:step-pulse 3.6s ease-in-out infinite}
+ .how-section[data-cards] .step-card:nth-child(2){animation-delay:1.2s}
+ .how-section[data-cards] .step-card:nth-child(3){animation-delay:2.4s}
+ .how-section[data-cards] .step-card::before{animation:step-sweep 7s ease-in-out infinite}
+ .how-section[data-cards] .step-card:nth-child(2)::before{animation-delay:2.3s}
+ .how-section[data-cards] .step-card:nth-child(3)::before{animation-delay:4.6s}
+ .how-section[data-cards] .step-icon svg{animation:step-icon-glow 3.6s ease-in-out infinite}
+}
+/* Payment buttons + details popup */
+.pay-chips{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
+.pay-chip{display:flex;align-items:center;justify-content:center;gap:10px;min-height:58px;padding:10px 12px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(255,255,255,.96);color:#141b1d;font:inherit;font-size:15px;font-weight:800;cursor:pointer;box-shadow:0 8px 18px rgba(0,0,0,.25);transition:transform .15s}
+.pay-chip:active{transform:scale(.97)}
+.pay-chip img,.pay-panel-head img{width:30px;height:30px;padding:4px;border-radius:8px;flex:0 0 30px;object-fit:contain}
+.pay-chip img[src*="zelle"],.pay-panel-head img[src*="zelle"]{background:#6d1ed4}.pay-chip img[src*="cashapp"],.pay-panel-head img[src*="cashapp"]{background:#008a35}.pay-chip img[src*="paypal"],.pay-panel-head img[src*="paypal"]{background:none;padding:0}
+.pay-chip .pay-mark,.pay-panel-head .pay-mark{display:grid;place-items:center;flex:0 0 30px;width:30px;height:30px;border-radius:8px;background:#1ec677;color:#fff;font-weight:900;font-size:17px}
+.pay-zelle{border-color:#6d1ed4}.pay-chime{border-color:#1ec677}
+@media(max-width:800px){.pay-chips{grid-template-columns:1fr 1fr}.site-menu .pay-chips{grid-template-columns:1fr 1fr}}
+.pay-dialog{width:min(460px,calc(100vw - 24px));background:linear-gradient(180deg,rgba(13,18,30,.97),rgba(13,18,30,.99)),#121827;color:#eef2f8;border:1px solid rgba(143,227,255,.35)}
+.pay-dialog .modal-heading h2{color:#fff}.pay-dialog .close-modal{background:rgba(255,255,255,.1);border-color:rgba(223,245,143,.45);color:#fff}
+.pay-panel-head{display:flex;align-items:center;gap:10px}.pay-panel-head h3{margin:0;font-size:22px;color:#fff}
+.pay-panel>p{color:#c9d3e0;font-size:14px;margin:10px 0 12px}
+.pay-copy{display:grid;gap:2px;width:100%;margin-bottom:10px;padding:12px 14px;border-radius:12px;border:1px solid rgba(223,245,143,.45);background:rgba(255,255,255,.06);color:#eef2f8;font:inherit;text-align:left;cursor:pointer}
+.pay-copy span{font-size:11px;color:#97a6ba;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.pay-copy b{font-size:18px;color:#fff;overflow-wrap:anywhere}
+.pay-copy small{font-size:12px;color:#dff58f}
+.pay-warn{font-size:12px;color:#97a6ba;margin:6px 0 0}
+/* Payment buttons match the contact buttons (dark outline); FB stays blue */
+.pay-chip{background:rgba(14,20,34,.6);color:#fff;border:1px solid rgba(162,185,204,.55);border-radius:12px;box-shadow:none;min-height:62px;font-size:16px}
+.pay-chip:hover{background:#284257}
+.pay-zelle,.pay-chime{border-color:rgba(162,185,204,.55)}
+@media(max-width:800px){.pay-chips,.site-menu .pay-chips{grid-template-columns:1fr}}
+.site-footer .footer-copy>.footer-qr{display:flex;align-items:center;justify-content:center;min-height:46px;padding:8px 10px;border-radius:12px;border:1px solid rgba(223,245,143,.45);background:rgba(255,255,255,.06);color:#eef2f8;font:inherit;font-size:13px;font-weight:800;cursor:pointer}
+.site-footer .footer-copy>.footer-qr:hover{background:rgba(223,245,143,.14)}
+/* Scrolling green category strip */
+.category-strip{display:block;overflow:hidden;padding-left:0;padding-right:0}
+.strip-track{display:flex;width:max-content}
+.strip-set{display:flex;align-items:center;gap:34px;padding-right:34px;white-space:nowrap;flex:0 0 auto}
+@keyframes strip-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:no-preference){.strip-track{animation:strip-scroll 28s linear infinite}.category-strip:hover .strip-track{animation-play-state:paused}}
+@media(max-width:800px){.strip-set{gap:22px;padding-right:22px}}
+.strip-item{border:0;background:none;padding:6px 2px;color:#141b1d;font:inherit;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+.strip-item:hover{text-decoration:underline}
+.strip-item:focus-visible{outline:2px solid #141b1d;outline-offset:2px}
+@media(prefers-reduced-motion:no-preference){.strip-track{animation-duration:70s}}
+@media(prefers-reduced-motion:reduce){.category-strip{overflow-x:auto}}
+/* Payment buttons: same look as the step cards (green pulsing border) */
+.pay-chip{position:relative;overflow:hidden;background:linear-gradient(135deg,rgba(255,255,255,.06),rgba(255,255,255,.015));border:1px solid rgba(214,240,142,.4);border-radius:22px;min-height:66px}
+.pay-chip:hover{background:rgba(223,245,143,.06)}
+@media(prefers-reduced-motion:no-preference){
+ .pay-chip{animation:step-pulse 3.6s ease-in-out infinite}
+ .pay-chip:nth-child(2){animation-delay:.9s}.pay-chip:nth-child(3){animation-delay:1.8s}.pay-chip:nth-child(4){animation-delay:2.7s}
+}

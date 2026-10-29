@@ -1,0 +1,375 @@
+[
+  {
+    "id": "jack-stands",
+    "title": "Performance Tool W41022 jack stand pair",
+    "category": "tools",
+    "price_text": "$35",
+    "description": "Performance Tool W41022 pair: 3-ton / 6,000 lb label, 11¼–16¾ in adjustment. Used, scuffed and chipped paint. $35. Ask Dylan about condition before you come by.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "Performance Tool",
+    "model": "W41022",
+    "photos": [
+      "/assets/items/crop/jack-stands-2.jpg",
+      "/assets/items/crop/jack-stands-3.jpg",
+      "/assets/items/crop/jack-stands-4.jpg",
+      "/assets/items/crop/jack-stands-1.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "mixed-tools",
+    "title": "Assorted wrenches & mixed tools",
+    "category": "tools",
+    "price_text": "Tools from $1 · ask for prices",
+    "description": "Hundreds of assorted wrenches and sets, SAE and metric. Mixed brands made in USA, Japan and Taiwan. More stock than pictured; prices vary by item.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/crop/mixed-tools-1.jpg",
+      "/assets/items/crop/mixed-tools-2.jpg",
+      "/assets/items/crop/mixed-tools-3.jpg",
+      "/assets/items/crop/mixed-tools-4.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "pipe-wrenches",
+    "title": "Pipe wrenches",
+    "category": "tools",
+    "price_text": "$15 each",
+    "description": "Mixed red, blue and gray adjustable pipe wrenches, $15 each. RIDGID is visible on one. Ask Dylan which are available and about size and condition.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/crop/pipe-wrenches-1.jpg",
+      "/assets/items/crop/pipe-wrenches-2.jpg",
+      "/assets/items/crop/pipe-wrenches-3.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "pick-your-tools",
+    "title": "Assorted / pick-your-own tool sets",
+    "category": "tools",
+    "price_text": "$35 each",
+    "description": "Assorted or pick-your-own hand tool sets, $35 each. Contents vary: the pictured kit (hammer, wrenches, pliers, knife, screwdrivers, hex keys and a blue-lid box) is an example, not a promise that every set is identical. Choose your set with Dylan.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/crop/tool-sets-1.jpg",
+      "/assets/items/crop/tool-sets-2.jpg",
+      "/assets/items/crop/tool-sets-3.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "sockets",
+    "title": "Sockets",
+    "category": "tools",
+    "price_text": "$1–$5 each",
+    "description": "Sockets, $1 to $5 each. SAE and metric; ask Dylan about drive sizes and condition.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/sockets.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Socket_set_with_two_ratchets_in_metal_box.jpeg\" target=\"_blank\" rel=\"noopener noreferrer\">Pittigrilli~commonswiki</a>, <a href=\"https://creativecommons.org/licenses/by-sa/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 4.0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "ratchets",
+    "title": "Ratchets",
+    "category": "tools",
+    "price_text": "$1–$5 each",
+    "description": "Ratchets, $1 to $5 each. Ask Dylan about brands, drive sizes and condition.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/ratchets.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Socket_wrench_and_sockets.JPG\" target=\"_blank\" rel=\"noopener noreferrer\">Kae</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "extensions",
+    "title": "Tool extensions",
+    "category": "tools",
+    "price_text": "Ask for prices",
+    "description": "Ask Dylan about available extensions and the sizes you need.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/extensions.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Socket_wrench_set.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Blaine Maber at en.wikipedia</a>, <a href=\"https://en.wikipedia.org/wiki/Public_domain\" target=\"_blank\" rel=\"noopener noreferrer\">Public domain</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "screwdrivers",
+    "title": "Screwdrivers",
+    "category": "tools",
+    "price_text": "$3–$4 each · pick 10 for $20",
+    "description": "Screwdrivers, $3 to $4 each, or pick any 10 for $20. Tell Dylan which types and sizes you need.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/screwdrivers.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Screwdrivers_WPC.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">WayneRay</a>, <a href=\"https://en.wikipedia.org/wiki/Public_domain\" target=\"_blank\" rel=\"noopener noreferrer\">Public domain</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "handyman-tools",
+    "title": "Handyman tools",
+    "category": "tools",
+    "price_text": "$1–$10 per item",
+    "description": "Handyman tools, $1 to $10 per item. Call with the job or tool you have in mind.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/handyman-tools.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Minnesota_State_Capitol_Woodworkers_Toolbox_Historical_Society.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Minnesota Historical Society</a>, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 2.0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "skateboards",
+    "title": "Skateboards",
+    "category": "boards",
+    "price_text": "$20–$50",
+    "description": "Skateboards from $20 to $50. Ask Dylan about the current boards, setup and condition.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/skateboards.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:1990s_skateboard_in_Tornio_20190608_001.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">Methem (Mikko J. Putkonen)</a>, <a href=\"https://creativecommons.org/licenses/by/4.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY 4.0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "longboards",
+    "title": "Longboards",
+    "category": "boards",
+    "price_text": "$30–$70",
+    "description": "Longboards from $30 to $70. Ask Dylan about the current boards, setup and condition.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/longboards.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:40incheslongboard.JPG\" target=\"_blank\" rel=\"noopener noreferrer\">Yamanbaiia</a>, <a href=\"https://en.wikipedia.org/wiki/Public_domain\" target=\"_blank\" rel=\"noopener noreferrer\">Public domain</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "dressers",
+    "title": "Dressers",
+    "category": "furniture",
+    "price_text": "$100–$180",
+    "description": "Dressers from $100 to $180. Ask Dylan about dimensions, condition and pickup arrangements.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/dressers.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "couches",
+    "title": "Couches",
+    "category": "furniture",
+    "price_text": "$399",
+    "description": "Couch, $399. Ask Dylan about measurements, condition and pickup arrangements.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/couches.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Couch-furniture-living-room-sofa_(24300293356).jpg\" target=\"_blank\" rel=\"noopener noreferrer\">www.Pixel.la Free Stock Photos</a>, <a href=\"https://creativecommons.org/publicdomain/zero/1.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "mirrors",
+    "title": "Mirrors",
+    "category": "furniture",
+    "price_text": "$25–$70",
+    "description": "Mirrors from $25 to $70. Ask Dylan about styles, sizes, condition and pickup arrangements.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/mirrors.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "dbz-orange-yellow",
+    "title": "Orange & yellow Dragon Ball Z bags",
+    "category": "backpacks",
+    "price_text": "$20 for both · $15 each",
+    "description": "A larger orange/yellow Dragon Ball Z backpack and a smaller orange/black bag. Used, normal wear; straps and zippers look intact but are not tested. Separate from the blue/black Kid Goku backpack.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/crop/dbz-bags-pair-1.jpg",
+      "/assets/items/crop/dbz-bags-pair-2.jpg",
+      "/assets/items/crop/dbz-bags-pair-3.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "kid-goku",
+    "title": "Blue/black Kid Goku backpack",
+    "category": "backpacks",
+    "price_text": "$30",
+    "description": "Separate blue/black Kid Goku Dragon Ball Z backpack. The partly visible matching pouch is not confirmed as included; ask Dylan.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/crop/blue-dbz-backpack-1.jpg",
+      "/assets/items/crop/blue-dbz-backpack-2.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": ""
+  },
+  {
+    "id": "flea-market",
+    "title": "Flea market finds",
+    "category": "finds",
+    "price_text": "Ask for prices",
+    "description": "Tell Dylan what you are looking for and find out what is in the mix.",
+    "availability": "Ask for current availability",
+    "condition": "Ask Dylan for condition details",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/examples/flea-market.jpg"
+    ],
+    "sourceUrl": "",
+    "platform": "",
+    "sourceStatus": "",
+    "photoCredit": "<a href=\"https://commons.wikimedia.org/wiki/File:Rth_Schoeneberg_08_flea_market.jpg\" target=\"_blank\" rel=\"noopener noreferrer\">A.Savin</a>, <a href=\"https://creativecommons.org/licenses/by-sa/3.0/\" target=\"_blank\" rel=\"noopener noreferrer\">CC BY-SA 3.0</a>, via Wikimedia Commons"
+  },
+  {
+    "id": "fb-milwaukee-toolbox",
+    "title": "Vintage Milwaukee metal tool box with mixed tools (Klein & more)",
+    "category": "tools",
+    "price_text": "$35",
+    "description": "Vintage mid-century Milwaukee Electric Tool Corp. heavy-duty steel carrying case packed with a variety of vintage hand tools, including Klein. Full details on the Facebook listing.",
+    "availability": "Ask Dylan or check the Facebook listing",
+    "condition": "See the Facebook listing",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/fb-milwaukee-toolbox.jpg"
+    ],
+    "sourceUrl": "https://www.facebook.com/marketplace/item/28444710648484140/",
+    "platform": "facebook-marketplace",
+    "sourceStatus": "verified",
+    "photoCredit": ""
+  },
+  {
+    "id": "fb-mustang-sunshade",
+    "title": "Covercraft UVS100 Mustang windshield sunshade (silver)",
+    "category": "finds",
+    "price_text": "$25",
+    "description": "Custom-fit Covercraft UVS100 sunshade for a Mustang. Reflective silver outer layer, foam core and soft felt backing; folds accordion-style for storage.",
+    "availability": "Ask Dylan or check the Facebook listing",
+    "condition": "See the Facebook listing",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/fb-mustang-sunshade.jpg"
+    ],
+    "sourceUrl": "https://www.facebook.com/marketplace/item/2106563970226121/",
+    "platform": "facebook-marketplace",
+    "sourceStatus": "verified",
+    "photoCredit": ""
+  },
+  {
+    "id": "fb-cobra-cctv",
+    "title": "Cobra 8-channel HD surveillance system, 4 cameras + 1TB HDD",
+    "category": "finds",
+    "price_text": "$140",
+    "description": "New, open box. The listing says the outer carton has cosmetic wear from storage but the inside has never been opened. 8-channel DVR, 4 HD cameras, 1TB hard drive.",
+    "availability": "Ask Dylan or check the Facebook listing",
+    "condition": "See the Facebook listing",
+    "brand": "",
+    "model": "",
+    "photos": [
+      "/assets/items/fb-cobra-cctv.jpg"
+    ],
+    "sourceUrl": "https://www.facebook.com/marketplace/item/1103700079241670/",
+    "platform": "facebook-marketplace",
+    "sourceStatus": "verified",
+    "photoCredit": ""
+  }
+]

@@ -1,0 +1,40 @@
+/* Owner-requested artwork blend: preserve original image pixels and aspect ratio. */
+.site-header{background:#141b2b;border-bottom-color:transparent}
+.hero{background:radial-gradient(ellipse at 78% 52%,rgba(49,76,103,.48),transparent 66%),linear-gradient(115deg,#101b26 0%,#191d32 58%,#241c37 100%)}
+.hero-art .image-frame{border:0;border-radius:0;background:transparent;box-shadow:none;min-height:0;overflow:visible}
+.hero-art .image-frame img{width:100%;height:auto;object-fit:contain;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 91%,transparent);mask-composite:intersect}
+.hero-art figcaption{color:#bdcbdc}
+.hero .tiny-star{display:inline-block;flex:0 0 auto;color:#b5edf4;transform-origin:center;animation:none}
+@keyframes welcome-twinkle{0%,100%{opacity:.8;transform:rotate(-7deg) scale(.96);text-shadow:0 0 0 transparent}48%{opacity:1;transform:rotate(7deg) scale(1.09);text-shadow:0 0 9px rgba(139,227,246,.48)}68%{opacity:.94;transform:rotate(0deg) scale(1);text-shadow:0 0 3px rgba(181,152,241,.24)}}
+@media(prefers-reduced-motion:no-preference){.hero .tiny-star{animation:welcome-twinkle 5.6s ease-in-out infinite}}
+@media(prefers-reduced-motion:reduce){.hero .tiny-star{animation:none;transform:none;text-shadow:none;opacity:1}}
+
+/* Original footer artwork integrated with the scene palette, never regenerated. */
+.site-footer{max-width:none;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) auto;gap:clamp(24px,4vw,64px);align-items:center;padding:48px clamp(20px,4.45vw,80px);background:radial-gradient(ellipse at 20% 50%,rgba(48,75,103,.4),transparent 64%),linear-gradient(115deg,#141d2d,#251c36);color:#f4f7fc}
+.footer-art{display:block;width:100%;max-width:460px;min-height:0;border:0;border-radius:0;box-shadow:none;background:transparent;overflow:visible}
+.footer-art img{width:100%;height:auto;object-fit:contain;-webkit-mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 91%,transparent);-webkit-mask-composite:source-in;mask-image:linear-gradient(to right,transparent,#000 7%,#000 93%,transparent),linear-gradient(to bottom,transparent,#000 7%,#000 91%,transparent);mask-composite:intersect}
+.footer-copy strong{color:#d0f2f8}.footer-copy p{color:#d0d7e2}.footer-copy small{color:#b7c2d3}.footer-copy>a{display:inline-flex;align-items:center;min-height:44px;color:#f4f7fc}.back-top{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:8px 0;color:#d0f2f8}.footer-art:focus-visible{outline-color:#b5edf4}
+@media(max-width:800px){.site-footer{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}.back-top{grid-column:1/-1;justify-self:start;margin-left:0}.footer-art{max-width:none}}
+@media(max-width:520px){.site-footer{grid-template-columns:minmax(0,1fr);padding-top:32px;padding-bottom:32px;gap:22px}.footer-art{width:100%;max-width:440px;justify-self:center}.footer-copy{max-width:100%}.back-top{grid-column:auto}}
+
+/* Full landing scene: background spans the hero; the sharp original stays legible. */
+.hero{position:relative;isolation:isolate;display:flex;align-items:center;min-height:690px;padding-top:64px;padding-bottom:64px;background:#151d30;overflow:hidden}
+.hero::before{content:"";position:absolute;z-index:-3;inset:-12px;background:url('/assets/dkainsworld-original.jpg') center/cover no-repeat;filter:blur(8px);opacity:.5;pointer-events:none}
+.hero::after{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,rgba(11,22,34,.97) 0%,rgba(15,25,40,.87) 30%,rgba(20,27,45,.16) 58%,rgba(29,21,46,.08) 100%),linear-gradient(0deg,#151d30 0%,transparent 16% 83%,rgba(20,27,43,.3) 100%);pointer-events:none}
+.hero-copy{position:relative;z-index:2;width:37%;max-width:440px;margin:0;padding:0}
+.hero h1{font-size:clamp(48px,5.2vw,80px)}
+.hero-description{color:#e0e7ee;font-size:15px;line-height:1.65}
+.hero-art{position:absolute;z-index:-2;width:78%;max-width:none;right:-5%;top:50%;transform:translateY(-50%);margin:0;pointer-events:none}
+.hero-art .image-frame{width:100%;min-height:0;border:0;border-radius:0;background:none;overflow:visible}
+.hero-art .image-frame img{width:100%;height:auto;object-fit:contain}
+.hero-art figcaption{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.hero .hero-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:26px 0 15px}
+.hero .hero-actions .button{min-width:0;width:100%;padding:14px 10px;gap:8px;font-size:12px;white-space:normal}
+.hero .button-outline{background:rgba(14,24,38,.76);border-color:#a2b9cc;color:#fff}
+.hero .button-outline:hover{background:#284257}
+.hero .hero-note{color:#c2ceda}
+@media(min-width:801px) and (max-width:1100px){.hero-copy{width:41%;max-width:370px}.hero h1{font-size:56px}.hero-art{width:84%;right:-11%}.hero::after{background:linear-gradient(90deg,rgba(11,22,34,.97),rgba(15,25,40,.86) 34%,rgba(20,27,45,.05) 65%),linear-gradient(0deg,#151d30,transparent 16% 85%,rgba(20,27,43,.3))}}
+@media(max-width:800px){.hero{display:block;min-height:clamp(600px,calc(100svh - 169px),780px);padding:30px 24px 330px}.hero-copy{position:static;width:100%;max-width:none}.hero h1{font-size:clamp(42px,8vw,56px);line-height:1.02;margin:16px 0}.hero-description{font-size:14px;max-width:460px;line-height:1.55}.hero .eyebrow{font-size:10px}.hero-art{width:100%;right:0;top:54%;transform:translateY(-50%)}.hero::after{background:linear-gradient(180deg,rgba(11,22,34,.94) 0%,rgba(15,25,40,.78) 27%,transparent 43% 64%,rgba(15,25,40,.8) 78%,#151d30 100%)}.hero .hero-actions{position:absolute;left:24px;right:24px;bottom:48px;margin:0;z-index:3;gap:10px}.hero .hero-actions .button{min-height:48px;padding:12px 10px;font-size:12px}.hero .hero-note{position:absolute;left:24px;right:24px;bottom:20px;font-size:10px;z-index:3}.hero-art .image-frame img{-webkit-mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 90%,transparent);mask-image:linear-gradient(to right,transparent,#000 3%,#000 97%,transparent),linear-gradient(to bottom,transparent,#000 8%,#000 90%,transparent)}}
+@media(max-width:360px){.hero{padding-left:20px;padding-right:20px;padding-top:26px}.hero h1{font-size:42px}.hero-description{font-size:13px}.hero .hero-actions,.hero .hero-note{left:20px;right:20px}}
+
+@media(max-width:360px){.hero .hero-actions .button{font-size:11px;gap:4px;white-space:nowrap}}

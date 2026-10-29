@@ -1,0 +1,74 @@
+/* Punch easter egg: centred card, non-blocking */
+.punch-egg{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;pointer-events:none;padding:16px}
+.punch-card{position:relative;width:min(92vw,560px);border-radius:22px;overflow:hidden;background:#0d1322;border:1px solid rgba(143,227,255,.5);box-shadow:0 30px 80px rgba(0,0,0,.65),0 0 30px rgba(40,140,255,.35);opacity:0;transform:scale(.6) rotate(-3deg);transition:opacity .3s ease,transform .45s cubic-bezier(.2,1.4,.4,1)}
+.punch-egg.in .punch-card{opacity:1;transform:none}
+.punch-egg.out .punch-card{opacity:0;transform:scale(.85);transition:opacity .3s ease,transform .3s ease}
+.punch-card video{display:block;width:100%;height:auto;aspect-ratio:640/428;background:#e9ecef}
+.punch-made{position:absolute;left:0;right:0;bottom:0;display:grid;justify-items:center;gap:4px;padding:34px 16px 16px;text-align:center;background:linear-gradient(180deg,transparent,rgba(8,12,24,.82) 38%,rgba(8,12,24,.94));opacity:0;transform:translateY(24px);transition:opacity .5s ease,transform .5s cubic-bezier(.2,.9,.3,1)}
+.punch-egg.made .punch-made{opacity:1;transform:none}
+.punch-made p{margin:0;color:#eef2f8;font-size:clamp(14px,3.6vw,18px);font-weight:700;line-height:1.3;max-width:28ch}
+.punch-made strong{color:#8fe3ff;font-size:clamp(17px,4.4vw,22px);letter-spacing:.06em;text-shadow:0 0 8px rgba(70,190,255,.9),0 0 18px rgba(40,120,255,.6)}
+@media(prefers-reduced-motion:reduce){.punch-egg{display:none}}
+/* AMH credit (same as Royal Luxe Cutz), very bottom of the footer */
+.amh-credit{grid-column:1/-1;margin-top:14px;padding-top:16px;border-top:1px solid rgba(255,255,255,.15)}
+.amh-credit a{display:grid;grid-template-columns:64px 1fr auto;align-items:center;gap:14px;width:100%;padding:12px 14px;border:1px solid rgba(223,245,143,.32);border-radius:16px;background:linear-gradient(135deg,rgba(116,70,166,.35),rgba(10,14,26,.6));color:#c9d3e0;backdrop-filter:blur(4px)}
+.amh-credit img{width:64px;height:64px;object-fit:contain}
+.amh-credit small,.amh-credit strong,.amh-credit em{display:block}
+.amh-credit small{font-size:11px;color:#c9d3e0}
+.amh-credit span>strong{color:#dff58f;font-size:17px;font-weight:900;letter-spacing:.04em;text-transform:uppercase}
+.amh-credit em{font-style:normal;font-size:11px;margin-top:2px}
+.amh-credit>a>strong{color:#fff;font-size:12px;white-space:nowrap}
+.amh-credit a:hover{border-color:#dff58f}
+@media(max-width:520px){.amh-credit a{grid-template-columns:52px 1fr}.amh-credit img{width:52px;height:52px}.amh-credit>a>strong{grid-column:1/-1;justify-self:end}}
+.amh-credit{display:flex;justify-content:flex-end}
+.amh-credit a{width:auto;max-width:min(440px,100%);cursor:pointer;position:relative;z-index:2}
+@media(max-width:520px){.amh-credit a{max-width:92%}}
+/* AMH credit: thin full-width bar at the very bottom */
+.amh-credit{display:block;margin-top:clamp(110px,24vw,200px)}
+.amh-credit a{width:100%;max-width:none;grid-template-columns:30px 1fr auto;gap:10px;padding:7px 14px;border-radius:12px;align-items:center}
+.amh-credit img{width:30px;height:30px}
+.amh-credit span{display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.amh-credit small{font-size:10px}
+.amh-credit span>strong{font-size:13px;letter-spacing:.06em}
+.amh-credit>a>strong{font-size:11px}
+@media(max-width:520px){.amh-credit a{max-width:none;grid-template-columns:26px 1fr auto;padding:6px 10px}.amh-credit img{width:26px;height:26px}.amh-credit span>strong{font-size:12px}.amh-credit>a>strong{grid-column:auto;font-size:10px}}
+/* AMH bar at the very bottom, right above the nav */
+.site-footer{padding-bottom:14px!important}
+.amh-credit{margin-top:clamp(160px,34vw,280px)}
+@media(max-width:520px){.site-footer{padding-bottom:12px!important}}
+.footer-legal{padding-top:clamp(330px,62vw,520px)}.amh-credit{margin-top:clamp(40px,10vw,90px)}
+.footer-legal .terms-link,.footer-legal .credits-tip{margin-top:clamp(40px,12vw,70px)}.footer-legal .credits-tip{margin-left:auto}.amh-credit{margin-top:6px}
+/* Footer bottom: full-width FB button, then one line (Terms · Photo credits · ©) right on top of AMH */
+.footer-legal{display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px}
+.footer-legal .fb-store-link{order:1;flex:0 0 100%;width:100%;max-width:none;justify-content:center;min-height:50px;font-size:15px}
+.footer-legal .terms-link{order:2;margin-top:clamp(40px,10vw,70px)}
+.footer-legal .credits-tip{order:3;margin-top:clamp(40px,10vw,70px);margin-left:auto}
+.footer-legal small{order:4;margin-top:clamp(40px,10vw,70px);font-size:11px}
+.footer-legal .terms-link,.footer-legal .credits-tip,.footer-legal small{align-self:center}
+/* FB button: centered, not full width, sits just above the Terms line */
+.footer-legal{padding-top:clamp(380px,72vw,560px)}
+.footer-legal .fb-store-link{flex:0 0 auto;width:min(340px,76%);margin:0 auto}
+.footer-legal .terms-link,.footer-legal .credits-tip,.footer-legal small{margin-top:12px}
+@media(min-width:801px){.footer-legal .fb-store-link{width:300px}}
+.footer-legal::after{content:"";order:2;flex:0 0 100%;height:0}.footer-legal .terms-link{order:3}.footer-legal .credits-tip{order:4}.footer-legal small{order:5}
+.footer-legal .terms-link{order:1}.footer-legal .credits-tip{order:2}.footer-legal small{order:3}.footer-legal::after{order:4}.footer-legal .fb-store-link{order:5;margin:14px auto 0}.footer-legal .terms-link,.footer-legal .credits-tip,.footer-legal small{margin-top:0}.amh-credit{margin-top:16px}
+/* Photo credits: tiny, under the AMH bar, in the existing bottom padding */
+.amh-credit{position:relative}
+.amh-credit .credits-tip{position:absolute;left:4px;top:100%;margin:0;min-height:0;padding:1px 0 0;font-size:8.5px;line-height:1.2;color:rgba(230,236,244,.42)}
+.footer-legal .credits-tip{display:none}
+/* Mission Peak side title over the footer picture (game-title style) */
+.peak-title{grid-column:1/-1;justify-self:start;display:grid;gap:2px;margin-top:clamp(26px,6vw,60px);padding:4px 0 4px 14px;border-left:3px solid #dff58f;box-shadow:-6px 0 14px -8px rgba(223,245,143,.9);text-shadow:0 2px 10px rgba(0,0,0,.65),0 0 2px rgba(0,0,0,.6)}
+.peak-title small{font-size:10.5px;font-weight:800;letter-spacing:.24em;text-transform:uppercase;color:#dff58f}
+.peak-title strong{font-size:clamp(28px,7.4vw,46px);line-height:1;font-weight:900;letter-spacing:.02em;text-transform:uppercase;color:#fff;-webkit-text-stroke:.5px rgba(0,0,0,.25)}
+.peak-title span{font-size:13px;font-weight:800;letter-spacing:.14em;color:#8fe3ff;text-shadow:0 0 8px rgba(70,190,255,.7),0 2px 8px rgba(0,0,0,.7)}
+.peak-title em{font-style:normal;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:#f4e2c4}
+.peak-title span{letter-spacing:.08em;font-size:12.5px}
+/* Mission Peak title as a link: welcome-pill style sparkle + glowing neon line */
+a.peak-title{color:inherit;text-decoration:none;border-left:3px solid #8fe3ff;box-shadow:-6px 0 16px -6px rgba(70,190,255,.95)}
+a.peak-title small{display:inline-flex;align-items:center;gap:8px;color:#8fe3ff;text-shadow:0 0 6px rgba(70,190,255,.95),0 0 16px rgba(40,120,255,.7)}
+.peak-star{font-size:14px;color:#9ff0ff;text-shadow:0 0 8px #47c8ff,0 0 18px #2a7dff}
+@media(prefers-reduced-motion:no-preference){.peak-star{animation:star-pulse 2.4s ease-in-out infinite}a.peak-title{animation:peak-line 3.6s ease-in-out infinite}}
+@keyframes peak-line{0%,100%{border-left-color:rgba(143,227,255,.55);box-shadow:-6px 0 10px -8px rgba(70,190,255,.6)}50%{border-left-color:#8fe3ff;box-shadow:-6px 0 20px -4px rgba(70,190,255,1)}}
+a.peak-title strong i{font-style:normal;font-size:.5em;vertical-align:super;color:#8fe3ff}
+a.peak-title:hover strong{color:#dff7ff}
+a.peak-title:focus-visible{outline:2px solid #8fe3ff;outline-offset:4px}

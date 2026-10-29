@@ -1,0 +1,40 @@
+/* Item cards v3: every card has a photo; tag says real / example / Facebook; price list. */
+.marketplace-detail{display:none}
+.item-photo .photo-tag{position:absolute;top:12px;left:12px;padding:6px 10px;border-radius:30px;background:#dff58f;color:#141b1d;font-size:10px;font-weight:800;letter-spacing:.06em;text-transform:uppercase}
+.item-photo .photo-example{background:#fff;color:#3a2f12;border:1px solid #d9c37a}
+.item-photo .photo-fb{background:#1877f2;color:#fff}
+.item-card .card-links{display:flex;flex-direction:column;gap:10px;margin-top:auto}
+.item-card .card-links .card-link{margin-top:0}
+.card-fb-link{display:flex;align-items:center;gap:9px;min-height:44px;padding:9px 12px;border-radius:7px;background:#1877f2;color:#fff;font-size:12px;font-weight:800}
+.card-fb-link:hover{background:#0f63d0;color:#fff}
+.card-fb-link .facebook-mark{background:#fff;color:#1877f2}
+.price-list{padding-top:56px;padding-bottom:56px}
+.price-list>h2{margin:10px 0 8px}
+.price-list>p:not(.eyebrow){color:var(--muted);font-size:14px;margin-bottom:22px}
+.price-list>ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 36px}
+.price-list>ul a{display:flex;align-items:baseline;gap:10px;padding:13px 2px;border-bottom:1px solid var(--line);font-size:14px}
+.price-list>ul a span{flex:1 1 auto;min-width:0;font-weight:600;overflow-wrap:anywhere}
+.price-list>ul a span::after{content:"";display:inline-block;width:0}
+.price-list>ul a b{flex:0 0 auto;max-width:48%;text-align:right;font-weight:800;color:#243c34}
+.price-list>ul a:hover span{text-decoration:underline}
+.photo-credits{margin-top:26px;font-size:12px;color:var(--muted)}
+.photo-credits summary{cursor:pointer;font-weight:700;min-height:44px;display:flex;align-items:center}
+.photo-credits ul{margin:6px 0 0;padding-left:18px;display:grid;gap:6px}
+.photo-credits a,.source-note a{text-decoration:underline}
+@media(max-width:800px){.price-list>ul{grid-template-columns:1fr}.price-list{padding-top:40px;padding-bottom:40px}}
+/* Photo viewer: fits the screen (no scrolling), plain arrows beside the photo, swipe to move */
+.gallery-dialog[open]{display:flex;flex-direction:column;gap:8px;width:min(900px,calc(100vw - 16px));height:min(860px,calc(100dvh - 16px));max-height:none;max-width:none;padding:14px 12px 16px;overflow:hidden}
+.gallery-dialog .modal-heading{margin-bottom:0;padding:0 4px}
+.gallery-dialog .modal-heading h2{font-size:20px;line-height:1.2}
+.gallery-stage{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:44px minmax(0,1fr) 44px;align-items:center;gap:2px;touch-action:pan-y}
+.gallery-stage #gallery-image{width:100%;height:100%;min-height:0;object-fit:contain;border-radius:10px;background:transparent}
+.gallery-arrow{display:grid;place-items:center;width:44px;height:100%;min-height:88px;max-height:240px;border:0;padding:0;background:none;color:#141b1d;font-size:52px;line-height:1;font-weight:300;cursor:pointer}
+.gallery-arrow:hover{color:#2e6958}.gallery-arrow:focus-visible{outline:3px solid #2680a2;border-radius:8px}
+.gallery-dialog .gallery-controls{justify-content:center;margin-top:0}
+.gallery-dialog #photo-count{font-size:13px;font-weight:700;color:#55614e}
+.gallery-dialog #gallery-details{margin:0;padding:0 4px;flex:0 0 auto}
+.gallery-dialog #gallery-price{font-size:17px}
+.gallery-dialog #gallery-description{font-size:13px;margin:4px 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.gallery-dialog .source-note{margin:0;padding:0 4px;font-size:11px}
+.gallery-dialog .marketplace-source{min-height:44px;width:100%}
+.gallery-dialog .marketplace-source{background:#1877f2;border-color:#1877f2;color:#fff}.gallery-dialog .marketplace-source:hover{background:#0f63d0}
